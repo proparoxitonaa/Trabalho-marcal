@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Seu E-commerce</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Conteúdo da Página de Carrinho de Compras -->
+    <div class="container mt-4">
+        <h2>Carrinho de Compras</h2>
+
+        <!-- Lista de Itens no Carrinho -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Preço Unitário</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Adicione uma linha para cada item no carrinho -->
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Nome do Produto </td>
+                    <td>1</td>
+                    <td>R$XX,XX</td>
+                    <td>R$YY,YY</td>
+                    <td>
+                        <button class="btn btn-outline-primary btn-sm">Editar</button>
+                        <button class="btn btn-outline-danger btn-sm">Remover</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+
+                <!-- Linha para subtotal e total -->
+                <tr>
+                    <td colspan="4"><strong>Subtotal:</strong></td>
+                    <td><strong>R$ZZ,ZZ</strong></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><strong>Total:</strong></td>
+                    <td><strong>R$ZZ,ZZ</strong></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Códigos de Desconto e Botão de Finalizar Compra -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cupomDesconto">Cupom de Desconto:</label>
+                    <input type="text" class="form-control" id="cupomDesconto">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-success btn-block">Aplicar Cupom</button>
+                <button class="btn btn-primary btn-block mt-2">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript via CDN (jQuery and Popper.js required) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

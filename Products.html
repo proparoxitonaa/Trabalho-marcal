@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Seu E-commerce de Camisas de Time</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        /* Paleta de Cores */
+        :root {
+            --primary-color: #007bff; /* Azul */
+            --secondary-color: #6c757d; /* Cinza */
+            --background-color: #f8f9fa; /* Fundo */
+            --navbar-background-color: #343a40; /* Fundo da barra de navegação */
+            --product-card-background: #fff; /* Fundo do card de produto */
+            --product-card-border: #dee2e6; /* Cor da borda do card de produto */
+        }
+
+        /* Estilos Gerais */
+        body {
+            background-color: var(--background-color);
+            padding-top: 56px; /* Altura da barra de navegação */
+        }
+
+        /* Barra de Navegação */
+        .navbar {
+            background-color: var(--navbar-background-color);
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        /* Seção de Produtos */
+        .products-section {
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Estilos específicos para a lista de produtos */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            flex: 0 0 calc(25% - 20px); /* 25% com margens entre os itens */
+            max-width: calc(25% - 20px);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            background-color: var(--product-card-background);
+            border: 1px solid var(--product-card-border);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card .card-body {
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .products-section {
+        padding: 20px;
+        margin-top: 30px;
+        background-color: #fff; /* Fundo da seção de produtos */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    .filter-buttons {
+        margin-bottom: 20px;
+    }
+
+    .filter-buttons button {
+        margin-right: 10px;
+    }
+
+
+       
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Seu E-commerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Site camisas.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="products.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Carrinho de compras.html">Carrinho</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção de Produtos -->
+    <div class="container products-section">
+        <div class="row">
+            <!-- Filtros -->
+            <div class="col-md-3">
+                <div class="filter-buttons">
+                    <button class="btn btn-primary" onclick="filterProducts('camisas')">Camisas</button>
+                    <button class="btn btn-primary" onclick="filterProducts('time')">Time</button>
+                    <button class="btn btn-secondary" onclick="clearFilters()">Limpar Filtros</button>
+                </div>
+            </div>
+            <!-- Lista de Produtos -->
+            <div class="col-md-9">
+                <div class="product-list">
+                    <!-- Produto 1 -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="https://shoppingdabola.com.br/wp-content/uploads/2023/06/RMCFMZ0127_01_7f8616a0-9006-4c4f-829a-c9ad552fa644_500x480-1.png" alt="Camisa 1">
+                            <div class="card-body">
+                                <h4 class="card-title">Real madrid</h4>
+                                <p class="card-text">Camisa real madrid 23/24 </p>
+                                    R$129,90
+                            </div>
+                            <div class="card-footer">
+                                <a href="Detalhes do produto 1.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <!-- Produto 2 -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="https://d2r9epyceweg5n.cloudfront.net/stores/002/822/562/products/camisa-barcelona-i-23-24-nike-vermelho-azul1-f7ee8c3a83190e033816868416190356-640-0.png" alt="Camisa 3">
+                            <div class="card-body">
+                                <h4 class="card-title">Barcelona</h4>
+                                <p class="card-text">Camisa Barcelona 23/24</p>
+                                 R$189,99
+                            </div>
+                            <div class="card-footer">
+                                <a href="Detalhes do produto 3.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                   
+                </div>
+                    <!-- Produto 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://www.lojadssports.com.br/cdn/shop/files/PJE4lq1YpqDBLqn_800x.jpg?v=1691946060.jpg" alt="Camisa 2">
+                        <div class="card-body">
+                            <h4 class="card-title">Al Hilal</h4>
+                            <p class="card-text">Camisa Al Hilal 23/24</p>
+                            R$ 150,00
+                        </div>
+                        <div class="card-footer">
+                            <a href="Detalhes do produto 4.html" class="btn btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Produto 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://imgcentauro-a.akamaihd.net/900x900/M0YQPX04/camisa-manchester-city-23-24-puma-home-torcedor-masculina-img.jpg" alt="Camisa 3">
+                        <div class="card-body">
+                            <h4 class="card-title">Manchester City</h4>
+                            <p class="card-text">Camisa Man. City 23/24</p>
+                             R$179,99
+                        </div>
+                        <div class="card-footer">
+                            <a href="Detalhes do produto 2.html" class="btn btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <!-- Bootstrap JavaScript via CDN (jQuery and Popper.js required) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- Continuação dos scripts e estilos -->
+    </body>
+</html>
+
+

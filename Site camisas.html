@@ -9,78 +9,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #b90b40; /* Cor de fundo principal */
+            background-color: #b90b40;
         }
-
         .navbar {
-            background-color: #053669; /* Cor da barra de navegação */
+            background-color: #053669;
         }
-
         .navbar-brand {
-            color: #130d0d; /* Cor do texto do nome do site */
+            color: #130d0d;
         }
-
         .navbar-nav .nav-link {
-            color: #d31010; /* Cor do texto dos links na barra de navegação */
+            color: #d31010;
         }
-
         .navbar-toggler-icon {
-            background-color: #fff; /* Cor do ícone do botão de alternância da barra de navegação */
+            background-color: #fff;
         }
-
         .container {
-            background-color: #301b8f; /* Cor de fundo do conteúdo principal */
-            padding-top: 20px; /* Espaçamento superior */
+            background-color: #301b8f;
+            padding-top: 20px;
         }
-
-        .card {
-            border: 1px solid #007bff; /* Cor da borda dos cards */
-        }
-
-        .btn-primary {
-            background-color: #007bff; /* Cor do botão "Ver Detalhes" */
-            border-color: #007bff; /* Cor da borda do botão "Ver Detalhes" */
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3; /* Cor do botão "Ver Detalhes" quando hover */
-            border-color: #0056b3; /* Cor da borda do botão "Ver Detalhes" quando hover */
-        }
-
-        .form-inline {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 20px; /* Espaçamento inferior da barra de pesquisa */
-        }
-
         .promotion-section {
-            background-color: #053669; /* Cor de fundo da seção de promoção */
+            background-color: #053669;
             padding: 20px;
-            margin-top: 30px; /* Espaçamento superior da seção de promoção */
+            margin-top: 30px;
         }
-
         .promotion-img {
             max-width: 100%;
             height: auto;
         }
-
         .stay-tuned-section {
-            background-color: #f8f9fa; /* Cor de fundo da seção "Fique ligado" */
+            background-color: #f8f9fa;
             padding: 20px;
-            margin-top: 30px; /* Espaçamento superior da seção "Fique ligado" */
+            margin-top: 30px;
         }
-
-        .stay-tuned-title {
-            font-weight: bold;
+        .stay-tuned-subtitle {
             color: #f8f9fa;
         }
-
-        .stay-tuned-subtitle {
-            color: #f8f9fa; /* Cor do subtitulo */
-        }
-
         .subscribe-box {
-            margin-top: 20px; /* Espaçamento superior da caixa de inscrição */
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -101,7 +66,7 @@
                     <a class="nav-link" href="products.html">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Carrinho de compras.html">Carrinho</a>
+                    <a class="nav-link" href="carrinho.html">Carrinho</a>
                 </li>
             </ul>
         </div>
@@ -114,126 +79,68 @@
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
         </form>
 
-        <!-- Destaques/Ofertas -->
+        <!-- Filtro de Preço -->
         <div class="row mt-4">
-             <!-- Camisa 1 -->
-             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://shoppingdabola.com.br/wp-content/uploads/2023/06/RMCFMZ0127_01_7f8616a0-9006-4c4f-829a-c9ad552fa644_500x480-1.png" alt="Camisa 1">
-                    <div class="card-body">
-                        <h4 class="card-title">Real madrid</h4>
-                        <p class="card-text">Camisa real madrid 23/24 </p>
-                            R$129,90
+            <div class="col-md-12">
+                <h5>Filtrar por Preço</h5>
+                <form id="price-filter-form" class="form-inline">
+                    <div class="form-group mr-2">
+                        <label for="minPrice" class="mr-2">Mínimo:</label>
+                        <input type="number" id="minPrice" class="form-control" placeholder="R$0,00">
                     </div>
-                    <div class="card-footer">
-                        <a href="Detalhes do produto 1.html?produto=1" class="btn btn-primary">Ver Detalhes</a>
+                    <div class="form-group mr-2">
+                        <label for="maxPrice" class="mr-2">Máximo:</label>
+                        <input type="number" id="maxPrice" class="form-control" placeholder="R$500,00">
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary">Filtrar</button>
+                </form>
             </div>
+        </div>
 
-            <!-- Adicione mais 5 camisas semelhantes conforme necessário -->
-            <!-- Camisa 2 -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://www.lojadssports.com.br/cdn/shop/files/PJE4lq1YpqDBLqn_800x.jpg?v=1691946060.jpg" alt="Camisa 2">
-                    <div class="card-body">
-                        <h4 class="card-title">Al Hilal</h4>
-                        <p class="card-text">Camisa Al Hilal 23/24</p>
-                        R$ 150,00
-                    </div>
-                    <div class="card-footer">
-                        <a href="Detalhes do produto 4.html" class="btn btn-primary">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://imgcentauro-a.akamaihd.net/900x900/M0YQPX04/camisa-manchester-city-23-24-puma-home-torcedor-masculina-img.jpg" alt="Camisa 3">
-                    <div class="card-body">
-                        <h4 class="card-title">Manchester City</h4>
-                        <p class="card-text">Camisa Man. City 23/24</p>
-                         R$179,99
-                    </div>
-                    <div class="card-footer">
-                        <a href="Detalhes do produto 2.html" class="btn btn-primary">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://d2r9epyceweg5n.cloudfront.net/stores/002/822/562/products/camisa-barcelona-i-23-24-nike-vermelho-azul1-f7ee8c3a83190e033816868416190356-640-0.png" alt="Camisa 3">
-                    <div class="card-body">
-                        <h4 class="card-title">Barcelona</h4>
-                        <p class="card-text">Camisa Barcelona 23/24</p>
-                         R$189,99
-                    </div>
-                    <div class="card-footer">
-                        <a href="Detalhes do produto 3.html" class="btn btn-primary">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
+        <!-- Seção de Produtos -->
+        <div class="row mt-4" id="product-list">
+            <!-- Os produtos serão inseridos aqui dinamicamente -->
         </div>
     </div>
-        </div>
-    </div>
-      <!-- Promoção Leve 3 e Pague 2 -->
+
+    <!-- Promoção Leve 3 e Pague 2 -->
     <div class="container promotion-section">
         <div class="row">
             <div class="col-md-12 text-center">
-                <!-- Substitua "caminho_da_imagem_promocao.jpg" pelo caminho real da sua imagem -->
                 <img src="https://www.lojadssports.com.br/cdn/shop/files/3_1451dba5-b288-4c9b-b5f5-eb592aa10888_1200x.png?v=1693419827" alt="Promoção Leve 3 e Pague 2" class="promotion-img">
             </div>
         </div>
     </div>
 
- 
-<!-- Seção "Fique Ligado" -->
-<div class="row mt-4 justify-content-center">
-    <div class="col-md-6 text-center">
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <h4>Fique Ligado</h4>
-            <p class="stay-tuned-subtitle">Seja o primeiro a saber sobre nossas ofertas especiais, novos produtos, lançamentos e eventos.</p>
-            <!-- Formulário de Inscrição -->
-            <form id="subscribe-box">
-                <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" aria-describedby="button-addon2" id="emailInput">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="subscribeButton" onclick="subscribe()">Assinar</button>
+    <!-- Seção "Fique Ligado" -->
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h4>Fique Ligado</h4>
+                    <p class="stay-tuned-subtitle">Seja o primeiro a saber sobre nossas ofertas especiais, novos produtos, lançamentos e eventos.</p>
+                    <form id="subscribe-box">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" aria-describedby="button-addon2" id="emailInput">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="subscribeButton" onclick="subscribe()">Assinar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-success" role="alert" id="thankYouMessage" style="display: none;">
+                        Obrigado pela confiança! Você receberá novidades no seu e-mail.
                     </div>
                 </div>
-            </form>
-            <!-- Mensagem de Agradecimento (inicialmente oculta) -->
-            <div class="alert alert-success" role="alert" id="thankYouMessage" style="display: none;">
-                Obrigado pela confiança! Você receberá novidades no seu e-mail.
             </div>
         </div>
     </div>
-    
-<script>
-    // Função para lidar com a inscrição
-    function subscribe() {
-        // Obtenha o valor do e-mail
-        var email = document.getElementById("emailInput").value;
-
-        // Simule um pedido assíncrono (pode ser substituído por uma chamada real de servidor)
-        setTimeout(function () {
-            // Oculte o formulário
-            document.getElementById("subscribeForm").style.display = "none";
-
-            // Mostre a mensagem de agradecimento
-            document.getElementById("thankYouMessage").style.display = "block";
-        }, 1000); // Simulação de atraso de 1 segundo (pode ser ajustado)
-    }
-</script>
-    
-
 
     <!-- Bootstrap JavaScript via CDN (jQuery and Popper.js required) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Componente JavaScript -->
+    <script src="componente.js"></script>
 </body>
 </html>

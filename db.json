@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Camisa do Brasil",
+            "description": "Camisa oficial da Seleção Brasileira.",
+            "price": 249.99,
+            "image": "https://shoppingdabola.com.br/wp-content/uploads/2023/06/RMCFMZ0127_01_7f8616a0-9006-4c4f-829a-c9ad552fa644_500x480-1.png"
+        },
+        {
+            "id": 2,
+            "name": "Camisa do Barcelona",
+            "description": "Camisa oficial do FC Barcelona.",
+            "price": 299.99,
+            "image": "https://imgcentauro-a.akamaihd.net/900x900/M0YQPX04/camisa-manchester-city-23-24-puma-home-torcedor-masculina-img.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Camisa do Manchester United",
+            "description": "Camisa oficial do Manchester United.",
+            "price": 279.99,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSPdz7CR_wR0s4jOsLrk0RABdUw-NmQCdCiTG2jfTZrRMpowM-TqJxbqD1Wgxcxr59ISWKwEo1lIe1N1OGwDthrbH3d-tVOfe4Wt9HL7-yUsO05KBodann8EA&usqp=CAE"
+        },
+        {
+            "id": 4,
+            "name": "Camisa do Real Madrid",
+            "description": "Camisa oficial do Real Madrid.",
+            "price": 289.99,
+            "image": "https://www.lojadssports.com.br/cdn/shop/files/PJE4lq1YpqDBLqn_800x.jpg?v=1691946060.jpg"
+        }
+    ]
+}

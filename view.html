@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .product-details {
+            margin-top: 30px;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="product-details" class="row product-details">
+            <!-- Detalhes do produto serão inseridos dinamicamente aqui -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript via CDN (jQuery and Popper.js required) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript para carregar os detalhes do produto -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('produto');
+
+            fetch('db.json')
+                .then(response => response.json())
+                .then(data => {
+                    const product = data.products.find(p => p.id == productId);
+
+                    if (product) {
+                        const productDetails = document.getElementById('product-details');
+
+                        const col = document.createElement('div');
+                        col.className = 'col-md-6';
+
+                        const img = document.createElement('img');
+                        img.className = 'product-image';
+                        img.src = product.image;
+                        img.alt = product.name;
+
+                        col.appendChild(img);
+                        productDetails.appendChild(col);
+
+                        const detailsCol = document.createElement('div');
+                        detailsCol.className = 'col-md-6';
+
+                        const productName = document.createElement('h2');
+                        productName.textContent = product.name;
+
+                        const productDescription = document.createElement('p');
+                        productDescription.textContent = product.description;
+
+                        const productPrice = document.createElement('h3');
+                        productPrice.textContent = `R$ ${product.price.toFixed(2)}`;
+
+                        detailsCol.appendChild(productName);
+                        detailsCol.appendChild(productDescription);
+                        detailsCol.appendChild(productPrice);
+                        productDetails.appendChild(detailsCol);
+                    } else {
+                        productDetails.textContent = "Produto não encontrado!";
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar os detalhes do produto:', error));
+        });
+    </script>
+</body>
+</html>
